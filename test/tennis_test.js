@@ -79,6 +79,13 @@ describe('TennisGame2', function() {
         }
    });
 
+   it('deberia devolver verdadero si Player2 va ganando y Player1 se mantiene en 0(Love)',function(){
+    var game=new TennisGame2("Juanito","Pepito");
+    var Player1score=1;
+    var Player2score=0;
+    expect(game.IsWinningPlayer2(Player1score,Player2score)).equal(true);
+   });
+
    it('deberia devolver el literal del score para todos los casos', function() {
         allScores.forEach(function(score) {
            checkScore(score[0], score[1], score[2]);
