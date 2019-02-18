@@ -31,6 +31,21 @@ TennisGame2.prototype.getScoreTheyAreTied=function(scoreOfBoth){
     }
     return scoreResult;
 };
+TennisGame2.prototype.getScorePlayer1isWinning=function(Player1points){
+    var scoreResult="";
+    switch(Player1points){
+        case 1:
+            scoreResult="Fifteen-Love";
+            break;
+        case 2:
+            scoreResult="Thirty-Love";
+            break;
+        case 3:
+            scoreResult="Forty-Love";
+            break;
+    }
+    return scoreResult;
+};
 
 TennisGame2.prototype.getScore = function() {
     var score = "";
