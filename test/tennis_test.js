@@ -90,7 +90,7 @@ describe('TennisGame2', function() {
         var game=new TennisGame2("Juanito","Pepito");
         var expectedScore=["Love-Fifteen","Love-Thirty","Love-Forty"];
         var position=0;
-        for(var scorePlayer2=1;scorePlayer2<2;scorePlayer2++){
+        for(var scorePlayer2=1;scorePlayer2<4;scorePlayer2++){
             expect(game.getScorePlayer2isWinningAndPlayer1isLove(scorePlayer2)).equal(expectedScore[position]);
             position++;
         }

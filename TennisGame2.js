@@ -56,7 +56,19 @@ TennisGame2.prototype.IsWinningPlayer2AndPlayer1isLove=function(Player1score,Pla
 };
 
 TennisGame2.prototype.getScorePlayer2isWinningAndPlayer1isLove=function(Player2score){
-    return "Love-Fifteen";
+    var scoreResult="";
+    switch(Player2score){
+        case 1:
+            scoreResult="Love-Fifteen";
+            break;
+        case 2:
+            scoreResult="Love-Thirty";
+            break;
+        case 3:
+            scoreResult="Love-Forty";
+            break;
+    }
+    return scoreResult;
 };
 TennisGame2.prototype.getScore = function() {
     var score = "";
