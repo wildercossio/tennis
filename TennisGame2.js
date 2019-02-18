@@ -13,8 +13,23 @@ TennisGame2.prototype.AreTheyTied =function(Player1points,Player2points){
     return Player1points==Player2points && Player1points<5;
 };
 
-TennisGame2.prototype.getScoreTheyAreTied=function(Player1points,Player2points){
-    return "Love-All";
+TennisGame2.prototype.getScoreTheyAreTied=function(scoreOfBoth){
+    var scoreResult="";
+    switch(scoreOfBoth){
+        case 0:
+            scoreResult="Love-All";
+            break;
+        case 1:
+            scoreResult="Fifteen-All";
+            break;
+        case 2:
+            scoreResult="Thirty-All";
+            break;
+        default:
+            scoreResult="Deuce";
+            break;
+    }
+    return scoreResult;
 };
 
 TennisGame2.prototype.getScore = function() {
