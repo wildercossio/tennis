@@ -9,8 +9,8 @@ function TennisGame2(player1Name, player2Name) {
     this.player2Name = player2Name;
 };
 
-TennisGame2.prototype.AreTheyTied =function(){
-    return true;
+TennisGame2.prototype.AreTheyTied =function(Player1points,Player2points){
+    return Player1points==Player2points && Player1points<3;
 }
 
 TennisGame2.prototype.getScore = function() {

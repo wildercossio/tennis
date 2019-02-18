@@ -49,7 +49,7 @@ describe('TennisGame2', function() {
 
    it('deberia devolver verdadero si los puntajes de los jugadores estan en empate',function(){
         var game=new TennisGame2("Juanito","Pepito");
-        expect(game.AreTheyTied()).equal(true);
+        expect(game.AreTheyTied(1,2)).equal(true);
    });
 
    it('deberia devolver el literal del score para todos los casos', function() {
