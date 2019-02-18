@@ -47,6 +47,11 @@ describe('TennisGame2', function() {
        [14, 16, "Win for player2"]
    ];
 
+   it('deberia devolver verdadero si los puntajes de los jugadores estan en empate',function(){
+        var game=new TennisGame2("Juanito","Pepito");
+        expect(false).equal(true);
+   });
+
    it('deberia devolver el literal del score para todos los casos', function() {
         allScores.forEach(function(score) {
            checkScore(score[0], score[1], score[2]);
