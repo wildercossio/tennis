@@ -66,7 +66,7 @@ describe('TennisGame2', function() {
         var game=new TennisGame2("Juanito","Pepito");
         var Player1score=1;
         var Player2score=0;
-        expect(game.IsWinningPlayer1(Player1score,Player2score)).equal(true);
+        expect(game.IsWinningPlayer1AndPlayer2isLove(Player1score,Player2score)).equal(true);
    });
 
    it('deberia devolver el literal del Score cuando el jugador1 va ganando y el jugador2 esta en Love',function(){
@@ -74,7 +74,7 @@ describe('TennisGame2', function() {
         var expectedScore=["Fifteen-Love","Thirty-Love","Forty-Love"];
         var position=0;
         for(var scorePlayer1=1;scorePlayer1<4;scorePlayer1++){
-            expect(game.getScorePlayer1isWinning(scorePlayer1)).equal(expectedScore[position]);
+            expect(game.getScorePlayer1isWinningAndPlayer2isLove(scorePlayer1)).equal(expectedScore[position]);
             position++;
         }
    });
@@ -83,7 +83,7 @@ describe('TennisGame2', function() {
     var game=new TennisGame2("Juanito","Pepito");
     var Player1score=0;
     var Player2score=1;
-    expect(game.IsWinningPlayer2(Player1score,Player2score)).equal(true);
+    expect(game.IsWinningPlayer2AndPlayer1isLove(Player1score,Player2score)).equal(true);
    });
 
    it('deberia devolver el literal del score para todos los casos', function() {

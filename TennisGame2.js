@@ -31,11 +31,11 @@ TennisGame2.prototype.getScoreTheyAreTied=function(scoreOfBoth){
     }
     return scoreResult;
 };
-TennisGame2.prototype.IsWinningPlayer1=function(Player1score,Player2score){
+TennisGame2.prototype.IsWinningPlayer1AndPlayer2isLove=function(Player1score,Player2score){
     return Player1score>0 && Player2score==0;
 };
 
-TennisGame2.prototype.getScorePlayer1isWinning=function(Player1score){
+TennisGame2.prototype.getScorePlayer1isWinningAndPlayer2isLove=function(Player1score){
     var scoreResult="";
     switch(Player1score){
         case 1:
@@ -51,7 +51,7 @@ TennisGame2.prototype.getScorePlayer1isWinning=function(Player1score){
     return scoreResult;
 };
 
-TennisGame2.prototype.IsWinningPlayer2=function(Player1score,Player2score){
+TennisGame2.prototype.IsWinningPlayer2AndPlayer1isLove=function(Player1score,Player2score){
     return Player2score>0 && Player1score==0;
 };
 
