@@ -13,7 +13,9 @@ TennisGame2.prototype.AreTheyTied =function(Player1points,Player2points){
     return Player1points==Player2points && Player1points<5;
 };
 
-
+TennisGame2.prototype.getScoreTheyAreTied=function(Player1points,Player2points){
+    return "Love-All";
+};
 
 TennisGame2.prototype.getScore = function() {
     var score = "";
