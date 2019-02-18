@@ -54,22 +54,27 @@ describe('TennisGame2', function() {
 
    it('deberia devolver el literal del Score cuando ambos jugadores empatan',function(){
         var game=new TennisGame2("Juanito","Pepito");
-        var resultExpect=["Love-All","Fifteen-All","Thirty-All","Deuce","Deuce"];
+        var expectedScore=["Love-All","Fifteen-All","Thirty-All","Deuce","Deuce"];
         var position=0;
         for(var scoreOfBoth=0;scoreOfBoth<5;scoreOfBoth++){
-            expect(game.getScoreTheyAreTied(scoreOfBoth)).equal(resultExpect[position]);
+            expect(game.getScoreTheyAreTied(scoreOfBoth)).equal(expectedScore[position]);
             position++;
         }
    });
-
    
+   it('deberia devolver verdadero si Player1 va ganando y Player2 se mantiene en Love',function(){
+        var game=new TennisGame2("Juanito","Pepito");
+        var Player1score=1;
+        var Player2score=1;
+        expect(game.IsWinningPlayer1(Player1score,Player2score)).equal(true);
+   });
 
    it('deberia devolver el literal del Score cuando el jugador1 va ganando y el jugador2 esta en Love',function(){
         var game=new TennisGame2("Juanito","Pepito");
-        var resultExpect=["Fifteen-Love","Thirty-Love","Forty-Love"];
+        var expectedScore=["Fifteen-Love","Thirty-Love","Forty-Love"];
         var position=0;
         for(var scorePlayer1=1;scorePlayer1<4;scorePlayer1++){
-            expect(game.getScorePlayer1isWinning(scorePlayer1)).equal(resultExpect[position]);
+            expect(game.getScorePlayer1isWinning(scorePlayer1)).equal(expectedScore[position]);
             position++;
         }
    });
