@@ -62,10 +62,10 @@ describe('TennisGame2', function() {
         }
    });
    
-   it('deberia devolver verdadero si Player1 va ganando y Player2 se mantiene en Love',function(){
+   it('deberia devolver verdadero si Player1 va ganando y Player2 se mantiene en 0(Love)',function(){
         var game=new TennisGame2("Juanito","Pepito");
         var Player1score=1;
-        var Player2score=1;
+        var Player2score=0;
         expect(game.IsWinningPlayer1(Player1score,Player2score)).equal(true);
    });
 

@@ -32,7 +32,7 @@ TennisGame2.prototype.getScoreTheyAreTied=function(scoreOfBoth){
     return scoreResult;
 };
 TennisGame2.prototype.IsWinningPlayer1=function(Player1score,Player2score){
-    return true;
+    return Player1score>0 && Player2score==0;
 };
 
 TennisGame2.prototype.getScorePlayer1isWinning=function(Player1score){
