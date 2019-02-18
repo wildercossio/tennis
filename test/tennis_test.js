@@ -52,12 +52,22 @@ describe('TennisGame2', function() {
         expect(game.AreTheyTied(4,4)).equal(true);
    });
 
-   it('deberia devolver el Score cuando ambos jugadores empatan',function(){
+   it('deberia devolver el literal Score cuando ambos jugadores empatan',function(){
         var game=new TennisGame2("Juanito","Pepito");
         var resultExpect=["Love-All","Fifteen-All","Thirty-All","Deuce","Deuce"];
         var position=0;
-        for(var scoreOfBoth=0;scoreOfBoth<1;scoreOfBoth++){
+        for(var scoreOfBoth=0;scoreOfBoth<5;scoreOfBoth++){
             expect(game.getScoreTheyAreTied(scoreOfBoth)).equal(resultExpect[position]);
+            position++;
+        }
+   });
+
+   it('deberia devolver verdadero si el jugador1 va ganando y el jugador2 esta en Love',function(){
+        var game=new TennisGame2("Juanito","Pepito");
+        var resultExpect=["Fifteen-Love","Thirty-Love","Forty-Love"];
+        var position=0;
+        for(var scorePlayer1=1;scorePlayer1<4;scorePlayer1++){
+            expect(game.getScorePlayer1isWinning(scorePlayer1,0)).equal(resultExpect[position]);
             position++;
         }
    });
