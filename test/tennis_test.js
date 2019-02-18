@@ -54,7 +54,12 @@ describe('TennisGame2', function() {
 
    it('deberia devolver el Score cuando los jugadores empatan',function(){
         var game=new TennisGame2("Juanito","Pepito");
-        expect(game.getScoreTheyAreTied(0,0)).equal("Love-All");
+        var resultExpect=["Love-All","Fifteen-All","Thirty-All","Deuce","Deuce"];
+        var position=0;
+        for(var score=0;score<1;score++){
+            expect(game.getScoreTheyAreTied(score,score)).equal(resultExpect[position]);
+            position++;
+        }
    });
 
    it('deberia devolver el literal del score para todos los casos', function() {
