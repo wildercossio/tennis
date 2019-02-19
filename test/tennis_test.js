@@ -34,17 +34,17 @@ describe('TennisGame2', function() {
        [4, 2, "Win for player1"],
        [2, 4, "Win for player2"],
 
-       [4, 3, "Advantage player1"],
-       [3, 4, "Advantage player2"],
-       [5, 4, "Advantage player1"],
-       [4, 5, "Advantage player2"],
-       [15, 14, "Advantage player1"],
-       [14, 15, "Advantage player2"],
+       [4, 3, "Advantage player1"],//falta
+       [3, 4, "Advantage player2"],//falta
+       [5, 4, "Advantage player1"],//falta
+       [4, 5, "Advantage player2"],//falta
+       [15, 14, "Advantage player1"],//falta
+       [14, 15, "Advantage player2"],//falta
 
-       [6, 4, "Win for player1"],
-       [4, 6, "Win for player2"],
-       [16, 14, "Win for player1"],
-       [14, 16, "Win for player2"]
+       [6, 4, "Win for player1"],//falta
+       [4, 6, "Win for player2"],//falta
+       [16, 14, "Win for player1"],//falta
+       [14, 16, "Win for player2"]//falta
    ];
 
    it('deberia devolver verdadero si los puntajes de los jugadores estan en empate',function(){
