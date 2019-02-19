@@ -117,6 +117,8 @@ TennisGame2.prototype.IsWinningPlayer1AndPlayer2isThirty=function(Player1score,P
 TennisGame2.prototype.IsTheWinnerPlayer1=function(Player1score,Player2score){
     return Player1score==4 && Player2score>=0 && Player2score<=2;
 };
+
+
 //-------------------------------------------------------------------------------------
 TennisGame2.prototype.getScore = function() {
     var score = "";
