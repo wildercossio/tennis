@@ -114,8 +114,8 @@ describe('TennisGame2', function() {
    }); 
    it('deberia devolver verdadero si Player2 va ganando y Player1 se mantiene en 1(Fifteen)',function(){
         var game=new TennisGame2("Juanito","Pepito");
-        var Player1score=0;
-        var Player2score=1;
+        var Player1score=1;
+        var Player2score=2;
         expect(game.IsWinningPlayer2AndPlayer1isFifteen(Player1score,Player2score)).equal(true);
    });
 
