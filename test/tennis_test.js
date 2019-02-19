@@ -149,13 +149,13 @@ describe('TennisGame2', function() {
         var Player2score=0;
         expect(game.IsTheWinnerPlayer1(Player1score,Player2score)).equal(true);
    });
-   it('deberia devolver el literal del Score cuando el Player1 es el ganador del juego',function(){
-    var game=new TennisGame2("Juanito","Pepito");
-    for(var scorePlayer2=0;scorePlayer2<3;scorePlayer2++){
-        expect(game.getScorePlayer1Win(scorePlayer2)).equal("Win for Player1");
-        position++;
-    }
-});
+   
+   it('deberia devolver verdadero si Player2 gano el juego',function(){
+        var game=new TennisGame2("Juanito","Pepito");
+        var Player1score=0;
+        var Player2score=4;
+        expect(game.IsTheWinnerPlayer2(Player1score,Player2score)).equal(true);
+   });
 //-----------------------------------------------------------------------------------------------------------
 
    it('deberia devolver el literal del score para todos los casos', function() {
