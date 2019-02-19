@@ -70,6 +70,11 @@ TennisGame2.prototype.getScorePlayer2isWinningAndPlayer1isLove=function(Player2s
     }
     return scoreResult;
 };
+
+TennisGame2.prototype.IsWinningPlayer1AndPlayer2isFifteen=function(Player1score,Player2score){
+    return true;
+};
+
 TennisGame2.prototype.getScore = function() {
     var score = "";
 
