@@ -158,28 +158,4 @@ describe('TennisGame2', function() {
    });
 //-----------------------------------------------------------------------------------------------------------
 
-   it('deberia devolver el literal del score para todos los casos', function() {
-        allScores.forEach(function(score) {
-           checkScore(score[0], score[1], score[2]);
-        });
-    });
-
-    
-
-    function checkScore(player1Score, player2Score, literalScore){
-        let thisGame = new TennisGame2("player1", "player2");
-        var highestScore = Math.max(player1Score, player2Score);
-        for (let i = 0; i < highestScore; i++) {
-            if (i < player1Score) {
-                thisGame.wonPoint("player1");
-            }
-            if (i < player2Score) {
-                thisGame.wonPoint("player2");
-            }
-        }
-        console.log("Expect game: "+player1Score.toString()+ " - "+player2Score.toString() + "  RETURNS:  "+literalScore )
-
-        expect(thisGame.getScore()).equal(literalScore);
-    }
-
-});
+   
