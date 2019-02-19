@@ -112,11 +112,22 @@ describe('TennisGame2', function() {
             position++;
         }
    }); 
+
    it('deberia devolver verdadero si Player2 va ganando y Player1 se mantiene en 1(Fifteen)',function(){
         var game=new TennisGame2("Juanito","Pepito");
         var Player1score=1;
         var Player2score=2;
         expect(game.IsWinningPlayer2AndPlayer1isFifteen(Player1score,Player2score)).equal(true);
+   });
+
+   it('deberia devolver el literal del Score cuando el Player2 va ganando y el Player1 se mantiene en Fifteen(1)',function(){
+        var game=new TennisGame2("Juanito","Pepito");
+        var expectedScore=["Fifteen-Thirty","Fifteen-Forty"];
+        var position=0;
+        for(var scorePlayer2=1;scorePlayer2<2;scorePlayer2++){
+            expect(game.getScorePlayer2isWinningAndPlayer1isFifteen(scorePlayer2)).equal(expectedScore[position]);
+            position++;
+        }
    });
 
    it('deberia devolver el literal del score para todos los casos', function() {
