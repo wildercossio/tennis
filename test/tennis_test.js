@@ -112,6 +112,13 @@ describe('TennisGame2', function() {
             position++;
         }
    }); 
+   it('deberia devolver verdadero si Player2 va ganando y Player1 se mantiene en 1(Fifteen)',function(){
+        var game=new TennisGame2("Juanito","Pepito");
+        var Player1score=0;
+        var Player2score=1;
+        expect(game.IsWinningPlayer2AndPlayer1isFifteen(Player1score,Player2score)).equal(true);
+   });
+
    it('deberia devolver el literal del score para todos los casos', function() {
         allScores.forEach(function(score) {
            checkScore(score[0], score[1], score[2]);
