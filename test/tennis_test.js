@@ -136,7 +136,12 @@ describe('TennisGame2', function() {
         var Player2score=2;
         expect(game.IsWinningPlayer2AndPlayer1isThirty(Player1score,Player2score)).equal(true);
    });
-
+   it('deberia devolver el literal del Score cuando el Player1 va ganando y el Player2 se mantiene en 1(Fifteen)',function(){
+        var game=new TennisGame2("Juanito","Pepito");
+        var Player1score=3;
+        var Player2score=2;
+        expect(game.getScorePlayer2isWinningAndPlayer1isThirty(Player1score,Player2score)).equal("Forty-Thirty");
+   });
 //-----------------------------------------------------------------------------------------------------------
 
    it('deberia devolver el literal del score para todos los casos', function() {
