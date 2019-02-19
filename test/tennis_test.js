@@ -130,6 +130,15 @@ describe('TennisGame2', function() {
         }
    });
 
+   it('deberia devolver verdadero si Player1 esta en 3(Forty) y Player2 esta en 2(Thrirty)',function(){
+        var game=new TennisGame2("Juanito","Pepito");
+        var Player1score=3;
+        var Player2score=2;
+        expect(game.IsWinningPlayer2AndPlayer1isThirty(Player1score,Player2score)).equal(true);
+   });
+
+//-----------------------------------------------------------------------------------------------------------
+
    it('deberia devolver el literal del score para todos los casos', function() {
         allScores.forEach(function(score) {
            checkScore(score[0], score[1], score[2]);
