@@ -75,6 +75,7 @@ TennisGame2.prototype.IsWinningPlayer1AndPlayer2isFifteen=function(Player1score,
     return Player1score>1 && Player2score==1;
 };
 
+
 TennisGame2.prototype.getScore = function() {
     var score = "";
 

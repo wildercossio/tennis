@@ -103,6 +103,15 @@ describe('TennisGame2', function() {
         expect(game.IsWinningPlayer1AndPlayer2isFifteen(Player1score,Player2score)).equal(true);
     });
 
+   it('deberia devolver el literal del Score cuando el Player1 va ganando y el Player2 se mantiene en 1(Fifteen)',function(){
+        var game=new TennisGame2("Juanito","Pepito");
+        var expectedScore=["Thirty-Fifteen","Forty-Fifteen"];
+        var position=0;
+        for(var scorePlayer1=1;scorePlayer1<4;scorePlayer1++){
+            expect(game.getScorePlayer1isWinningAndPlayer2isFifteen(scorePlayer1)).equal(expectedScore[position]);
+            position++;
+        }
+   }); 
    it('deberia devolver el literal del score para todos los casos', function() {
         allScores.forEach(function(score) {
            checkScore(score[0], score[1], score[2]);
