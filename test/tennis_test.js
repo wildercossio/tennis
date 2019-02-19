@@ -138,11 +138,17 @@ describe('TennisGame2', function() {
    });
 
    it('deberia devolver verdadero si Player2 esta en 3(Forty) y Player1 esta en 2(Thrirty)',function(){
-    var game=new TennisGame2("Juanito","Pepito");
-    var Player1score=2;
-    var Player2score=3;
-    expect(game.IsWinningPlayer1AndPlayer2isThirty(Player1score,Player2score)).equal(true);
-});
+        var game=new TennisGame2("Juanito","Pepito");
+        var Player1score=2;
+        var Player2score=3;
+        expect(game.IsWinningPlayer1AndPlayer2isThirty(Player1score,Player2score)).equal(true);
+   });
+   it('deberia devolver verdadero si Player1 gano el juego',function(){
+        var game=new TennisGame2("Juanito","Pepito");
+        var Player1score=4;
+        var Player2score=0;
+        expect(game.IsTheWinnerPlayer1(Player1score,Player2score)).equal(true);
+   });
    
 //-----------------------------------------------------------------------------------------------------------
 
