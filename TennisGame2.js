@@ -94,7 +94,16 @@ TennisGame2.prototype.IsWinningPlayer2AndPlayer1isFifteen=function(Player1score,
 };
 
 TennisGame2.prototype.getScorePlayer2isWinningAndPlayer1isFifteen=function(Player2score){
-    return "Fifteen-Thirty";
+    var scoreResult="";
+    switch(Player2score){
+        case 1:
+            scoreResult="Fifteen-Thirty";
+            break;
+        case 2:
+            scoreResult="Fifteen-Forty";
+            break;
+    }
+    return scoreResult;
 };
 TennisGame2.prototype.getScore = function() {
     var score = "";
